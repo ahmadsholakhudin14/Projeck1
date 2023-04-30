@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="title">
+            <h3>Hidayatul Khasanah</h3>
+        </div>
+        <div class="pages">
+            <a href="index.html">HOME</a>
+            <a href="product.html">PRODUCT</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="portfolio.html" class="active">PORTFOLIO</a>
+        </div>
+    </div>
+    <div class="container-1">
+        <div class="picture">
+            <img src="img/Profile.png" alt="picture">
+        </div>
+        <div class="section-1">
+            <h3 id="name">Hidayatul Khasanah</h3>
+            <p id="role">Web Developer Program</p>
+            <button class="btn-primary">Kontak</button>
+            <button class="btn-secondary">Resume</button>
+        </div>
+        <div class="section-2">
+            <b>Availability</b>
+            <b>Usia</b>
+            <b>Lokasi</b>
+            <b>Pengalaman</b>
+            <b>Email</b>
+        </div>
+        <div class="section-3">
+            <p id="availability">Full Time</p>
+            <p id="age">21 Tahun</p>
+            <p id="location">Bandung</p>
+            <p id="experience">3 Tahun</p>
+            <p id="email">hidayatulkhasanah760@gmail.com</p>
+        </div>
+    </div>
+    <div class="container-2">
+        <form action="" method="POST" id="form-data">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-input" name="name">
+            </div>
+            <div class="form-group">
+                <label for="role">Role</label>
+                <input type="text" class="form-input" name="role">
+            </div>
+            <div class="form-group">
+                <label for="availability">Availability</label>
+                <input type="text" class="form-input" name="availability">
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" class="form-input" name="age">
+            </div>
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" class="form-input" name="location">
+            </div>
+            <div class="form-group">
+                <label for="experience">Years Experience</label>
+                <input type="number" class="form-input" name="experience">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-input" name="email">
+            </div>
+            <button type="submit" class="btn-success button-submit">SUBMIT</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script>
+        // Jika id form-data di sumbit, maka:
+        $('#form-data').on('submit', function(e) {
+            // Menghentikan form submit
+            e.preventDefault();
+
+            // Ambil Value
+            const name          = $('input[name=name]').val();
+            const role          = $('input[name=role]').val();
+            const availability  = $('input[name=availability]').val();
+            const age           = $('input[name=age]').val();
+            const location      = $('input[name=location]').val();
+            const experience    = $('input[name=experience]').val();
+            const email         = $('input[name=email]').val();
+
+            // Ubah inner HTML
+            $('#name').html(name);
+            $('#role').html(role);
+            $('#availability').html(availability);
+            $('#age').html(age + ' Tahun');
+            $('#location').html(location);
+            $('#experience').html(experience + ' Tahun');
+            $('#email').html(email);
+
+            // Reset Form
+            $('input').val('');
+        });
+    </script>
+</body>
+</html>

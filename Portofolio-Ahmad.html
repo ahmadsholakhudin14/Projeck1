@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>
+                Challenge Sesi 1
+            </title>
+
+            <style>
+                body {
+                    background-color: #f7f8fc;
+                    margin: 0;
+                }
+                .navigasi-menu {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    padding: 20px 130px 20px 130px;
+                    gap: 20px;
+                    background-color: #fff;
+                    box-shadow: 5px 5px 5px #d8d9dc;
+                    margin-bottom: 40px;
+                }
+                .navigasi-menu a {
+                    color: #000;
+                }
+                .card-body {
+                    background-color: #fff;
+                    margin: 20px 130px 20px 130px;
+                    border-radius: 5px;
+                    margin-bottom: 30px;
+                    padding: 20px;
+                }
+                .row {
+                    padding: 20px;
+                    display: flex;
+                    gap: 30px;
+                }
+                .image {
+                    border-radius: 50%;
+                }
+                .btn-kontak {
+                    background-color: #1711f6;
+                    color: #fff;
+                    padding: 5px;
+                    border: transparent;
+                    width: 100px;
+                    border-radius: 3px;
+                }
+                .btn-resume {
+                    background-color: #fff;
+                    color: #3a7815;
+                    padding: 5px;
+                    border: 1px solid #3a7815;
+                    width: 100px;
+                    border-radius: 3px;
+                }
+                .margin-h6 h6 {
+                    margin-bottom: 0 !important;
+                    margin-top: 20px;
+                }
+                .form-test {
+                    width: 100%;
+                    padding: 30px;
+                }
+                input[type=text], select {
+                    width: 100%;
+                    padding: 12px 20px;
+                    margin: 8px 0;
+                    display: inline-block;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                }
+                input[type=number], select {
+                    width: 100%;
+                    padding: 12px 20px;
+                    margin: 8px 0;
+                    display: inline-block;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                }
+                input[type=email], select {
+                    width: 100%;
+                    padding: 12px 20px;
+                    margin: 8px 0;
+                    display: inline-block;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                }
+                .btn-submit {
+                    width: 100%;
+                    background-color: #4CAF50;
+                    color: white;
+                    padding: 14px 20px;
+                    margin: 8px 0;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                }
+                #setion1    {
+                    color: black;
+                }
+                .btn-submit:hover {
+                    background-color: #45a049;
+                }
+                h1 {
+                    color: red;
+                }
+                .container h1 {
+                    color: red;
+                }
+                
+            </style>
+        </head>
+
+        <body>
+           
+            <div id="section1" class="navbar navigasi-menu">
+                <a href="#"> HOME </a>
+                <a href="#"> PRODUCT </a>
+                <a href="#"> GALLERY </a>
+                <a href="#"> BLOG </a>
+                <a href="#"> INVENTORY
+              
+            </div>
+
+    
+            <div id="section2" class="card card-body">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <img src="foto1.jpg" width="140" class="image" alt />
+                    </div>
+                    <div class="col-lg-3" style="width: 300px;">
+                        <h4 id="name"> Ahmad Sholakhudin </h4>
+                        <h6 id="role"> Frontend Engineer </h6>
+                        <button class="btn btn-kontak"> Kontak </button>
+                        <button class="btn btn-resume"> Resume </button>
+                    </div>
+                    <div class="col-lg-3 margin-h6">
+                        <h6>Availability</h6>
+                        <h6>Usia</h6>
+                        <h6>Lokasi</h6>
+                        <h6>Pengalaman</h6>
+                        <h6>Email</h6>
+                    </div>
+                    <div class="col-lg-4 margin-h6">
+                        <h6 id="Availability">Fulltime</h6>
+                        <h6 id="usia">22</h6>
+                        <h6 id="lokasi">Semarang    </h6>
+                        <h6 id="pengalaman">6</h6>
+                        <h6 id="email">ahmad@gmail.com</h6>
+                    </div>
+                </div>
+            </div>
+    
+            <div id="section3" class="card card-body">
+                <form>
+                    <div>
+                        <label>Nama</label>
+                        <input type="text" name="nama" id="nameInp" />
+                    </div>
+                   <div>
+                        <label>Role</label>
+                        <input type="text" name="role" id="roleinp"/>
+                   </div>
+                   <div>
+                        <label>Availability</label>
+                        <input type="text" nama="Availability" id="AvailabilityInp"/>
+                   </div>
+                   <div>
+                        <label>Umur</label>
+                        <input type="number" nama="umur" id="usiaInp"/>
+                   </div>
+                   <div>
+                        <label>Lokasi</label>
+                        <input type="text" nama="lokasi" id="lokasiInp"/>
+                   </div>
+                   <div>
+                        <label>Year Experiences</label>
+                        <input type="number" nama="umur" id="pengalamanInp"/>
+                   </div>
+                   <div>
+                        <label>Email</label>
+                        <input type="email" nama="email" id="emailInp"/>
+                   </div>
+                    <button type="button" class="btn btn-submit" onclick="editData()"> SUBMIT </button>
+                </form>
+            </div>
+        </body>
+        <script>
+            let nameShow = document.getElementById('name').innerHTML;
+            let nameInput = document.getElementById('nameInp');
+            nameInput.value=nameShow;
+
+            let roleShow = document.getElementById('role').innerHTML;
+            let roleInput = document.getElementById('roleinp');
+            roleInput.value=roleShow;
+
+            let avaShow = document.getElementById('Availability').innerHTML;
+            let avaInput = document.getElementById('AvailabilityInp');
+            avaInput.value=avaShow;
+      
+            let umShow = document.getElementById('usia').innerHTML;
+            let umInput = document.getElementById('usiaInp');
+            umInput.value=umShow;
+
+            let lokShow = document.getElementById('lokasi').innerHTML;
+            let lokInput = document.getElementById('lokasiInp');
+            lokInput.value=lokShow;
+
+            let yeShow = document.getElementById('pengalaman').innerHTML;
+            let yeInput = document.getElementById('pengalamanInp');
+            yeInput.value=yeShow;
+
+            let mailShow = document.getElementById('email').innerHTML;
+            let mailInput = document.getElementById('emailInp');
+            mailInput.value=mailShow;
+
+          
+            function editData(){
+        let updateName = document.getElementById('nameInp').value;
+        let name = document.getElementById('name');
+        name.innerHTML = updateName;
+
+        let updaterole = document.getElementById('roleinp').value;
+        let role = document.getElementById('role');
+        role.innerHTML = updaterole;
+            }
+        </script>
+    </html>
