@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Diri</title>
+    <link rel="stylesheet" href="css/Porto_Raihan.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="title">
+            <h3> <b>Data Diri</b> </h3>
+        </div>
+        <div class="pages">
+            <p class="active">BERANDA</p>
+            <p>PRODUK</p>
+            <p>GALERI</p>
+            <p>PENYIMPANAN</p>
+        </div>
+    </div>
+    <div class="container-1">
+        <div class="picture">
+            <img src="images/Me.jpg" alt="picture">
+        </div>
+        <div class="section-1">
+            <h3 id="name">Raihan Farras</h3>
+            <p id="role">Website Developer Student</p>
+            <button class="btn1" onclick=editData()>Edit</button>
+            <button class="btn2">Resume</button>
+        </div>
+        <div class="section-2">
+            <b>Availability</b>
+            <b>Usia</b>
+            <b>Alamat</b>
+            <b>Pengalaman</b>
+            <b>Email</b>
+        </div>
+        <div class="section-3">
+            <p id="availability">Part Time</p>
+            <p id="age">20</p>
+            <p id="address">Padang</p>
+            <p id="exp">-</p>
+            <p id="email">Sukahatiku37@email.com</p>
+        </div>
+    </div>
+    <div class="container-2">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-input" name="name" id="namejs">
+        </div>
+        <div class="form-group">
+            <label for="role">Role</label>
+            <input type="text" class="form-input" name="role" id="rolejs">
+        </div>
+        <div class="form-group">
+            <label for="availability">Availability</label>
+            <input type="text" class="form-input" name="availability" id="availablejs">
+        </div>
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" class="form-input" name="age" id="agejs">
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" class="form-input" name="address" id="addressjs">
+        </div>
+        <div class="form-group">
+            <label for="experience">Experience</label>
+            <input type="text" class="form-input" name="experience" id="expjs">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-input" name="email" id="emailjs">
+        </div>
+        <button class="btn3" onclick=editData()>SUBMIT</button>
+    </div>
+</body>
+    <script>
+    let nameShow = document.getElementById('name').innerHTML;
+    let nameInput = document.getElementById('namejs');
+    nameInput.value = nameShow;
+    let roleShow = document.getElementById('role').innerHTML;
+    let roleInput = document.getElementById('rolejs');
+    roleInput.value = roleShow;
+    let availableShow = document.getElementById('availability').innerHTML;
+    let availableInput = document.getElementById('availablejs');
+    availableInput.value = availableShow;
+    let ageShow = document.getElementById('age').innerHTML;
+    let ageInput = document.getElementById('agejs');
+    ageInput.value = ageShow;
+    let addressShow = document.getElementById('address').innerHTML;
+    let addressInput = document.getElementById('addressjs');
+    addressInput.value = addressShow;
+    let expShow = document.getElementById('exp').innerHTML;
+    let expInput = document.getElementById('expjs');
+    expInput.value = expShow;
+    let emailShow = document.getElementById('email').innerHTML;
+    let emailInput = document.getElementById('emailjs');
+    emailInput.value = emailShow;
+        function editData() {
+            let updatename = document.getElementById("namejs").value;
+            let name = document.getElementById("name");
+            name.innerHTML = updatename;
+            let updaterole = document.getElementById("rolejs").value;
+            let role = document.getElementById("role");
+            role.innerHTML = updaterole;
+            let updateavailability = document.getElementById("availablejs").value;
+            let availability = document.getElementById("availability");
+            availability.innerHTML = updateavailability;
+            let updateage = document.getElementById("agejs").value;
+            let age = document.getElementById("age");
+            age.innerHTML = updateage;
+            let updateaddress = document.getElementById("addressjs").value;
+            let address = document.getElementById("address");
+            address.innerHTML = updateaddress;
+            let updateexp = document.getElementById("expjs").value;
+            let experience = document.getElementById("exp");
+            exp.innerHTML = updateexp;
+            let updateemail = document.getElementById("emailjs").value;
+            let email = document.getElementById("email");
+            email.innerHTML = updateemail;
+        }
+    </script>
+</html>
